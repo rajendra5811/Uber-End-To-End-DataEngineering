@@ -16,7 +16,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "rajendra5811/Uber-End-To-End-DataEngineering/refs/heads/main/Data/@(dataset().p_file)",
+					"value": "/rajendra5811/Uber-End-To-End-DataEngineering/refs/heads/main/Data/@(dataset().p_file).json",
 					"type": "Expression"
 				}
 			}
