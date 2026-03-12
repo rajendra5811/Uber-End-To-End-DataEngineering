@@ -1,0 +1,12 @@
+{
+	"name": "is_github",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/rajendra5811/Uber-End-To-End-DataEngineering/refs/heads/main/Data/bulk_rides.json",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
