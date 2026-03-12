@@ -1,0 +1,9 @@
+{
+	"name": "adf12-uber",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "44a7a8f1-52cd-4e41-8565-392b0c359ffd",
+		"tenantId": "0d18774e-f079-4a24-8f5c-52e3dcd02da0"
+	}
+}
