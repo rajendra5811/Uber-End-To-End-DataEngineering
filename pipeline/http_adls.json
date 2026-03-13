@@ -77,6 +77,9 @@
 								},
 								"sink": {
 									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
 									"formatSettings": {
 										"type": "JsonWriteSettings"
 									}
@@ -97,8 +100,14 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_github",
-									"type": "DatasetReference"
+									"referenceName": "ds_ingest",
+									"type": "DatasetReference",
+									"parameters": {
+										"p_file": {
+											"value": "@item().file",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
