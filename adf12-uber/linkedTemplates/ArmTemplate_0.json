@@ -70,7 +70,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "files_arr.json",
+						"fileName": "files_array.json",
 						"fileSystem": "raw"
 					}
 				},
@@ -252,7 +252,7 @@
 											"type": "DatasetReference",
 											"parameters": {
 												"p_file": {
-													"value": "@(item.file).json",
+													"value": "@item.file",
 													"type": "Expression"
 												}
 											}
