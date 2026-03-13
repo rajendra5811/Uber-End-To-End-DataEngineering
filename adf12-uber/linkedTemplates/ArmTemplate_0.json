@@ -201,7 +201,7 @@
 							},
 							"activities": [
 								{
-									"name": "HTTP_Ingestion",
+									"name": "Copy data1",
 									"type": "Copy",
 									"dependsOn": [],
 									"policy": {
@@ -216,8 +216,9 @@
 										"source": {
 											"type": "JsonSource",
 											"storeSettings": {
-												"type": "HttpReadSettings",
-												"requestMethod": "GET"
+												"type": "AzureBlobFSReadSettings",
+												"recursive": true,
+												"enablePartitionDiscovery": false
 											},
 											"formatSettings": {
 												"type": "JsonReadSettings"
@@ -236,11 +237,11 @@
 									},
 									"inputs": [
 										{
-											"referenceName": "ds_github",
+											"referenceName": "ds_ingest",
 											"type": "DatasetReference",
 											"parameters": {
 												"p_file": {
-													"value": "@item().file",
+													"value": "@(item().file).json",
 													"type": "Expression"
 												}
 											}
@@ -270,7 +271,6 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/ds_files_array')]",
-				"[concat(variables('factoryId'), '/datasets/ds_github')]",
 				"[concat(variables('factoryId'), '/datasets/ds_ingest')]"
 			]
 		}
