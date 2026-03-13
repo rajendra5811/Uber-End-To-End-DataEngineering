@@ -1,24 +1,16 @@
 {
-	"name": "ds_github",
+	"name": "ds_githuba",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "is_github",
 			"type": "LinkedServiceReference"
-		},
-		"parameters": {
-			"p_file": {
-				"type": "string"
-			}
 		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": {
-					"value": "rajendra5811/Uber-End-To-End-DataEngineering/refs/heads/main/Data/@(dataset().p_file)",
-					"type": "Expression"
-				}
+				"relativeUrl": "rajendra5811/Uber-End-To-End-DataEngineering/blob/main/Data/map_cancellation_reasons.json"
 			}
 		},
 		"schema": {}
