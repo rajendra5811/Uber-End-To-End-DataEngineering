@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "files_arr.json",
+				"fileName": "files_array.json",
 				"fileSystem": "raw"
 			}
 		},
